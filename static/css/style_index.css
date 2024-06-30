@@ -1,0 +1,260 @@
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.banner_index {
+    background-color: #e6f3ffc2;
+    padding: 40px 0;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    display: flex;
+    
+    box-shadow: 0 0 10px #00b09b83;
+}
+.banner_index .contenct_title{
+    width: 75%;
+    height: 40px;
+    text-align: center;
+}
+
+.banner_index .contenct_title h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+.banner_index form{
+    margin: auto;  
+    width: 15%;
+}
+.banner_index form button{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00b09b83;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    cursor: pointer;
+}
+.banner_index form button:hover{
+    background-color: #e6f3ffc2;
+    color: #00b09b83;
+    border: 1px solid #00b09b83;
+}
+
+
+
+.querys {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.querys .description_section {
+    width: 100%;
+    padding: 20px 40px;
+}
+.querys .description_section p{
+    font-size: 18px;
+    color:black;
+}
+
+.cards {
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #00b09b83;
+    padding: 20px;
+    width: 240px;
+    border-radius: 5px;
+    text-align: center;
+}
+.cards h4{
+    margin: 5px 0;
+    font-size: 13px;
+    text-align: justify;
+    text-decoration: wavy;
+}
+.cards p {
+    margin: 5px 0;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.view-query-form {
+    margin-top: 10px;
+}
+
+.view-query-btn {
+    float: right;
+    margin-top: 5px;
+    background-color: #00b09b83;
+    color: #fff;
+    border: 1px solid #00b09b83;
+    padding: 8px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.view-query-btn:hover{
+    color:#00b09b83;
+    border: 1px solid #00b09b83;
+    background-color: white;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(80, 80, 80, 0.836);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.modal-active {
+    display: flex;
+}
+
+.contenct_results {
+    background-color: #fff;
+    padding: 25px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.contenct_results .back button{
+    margin-top: 5px;
+    background-color: #00b09b83;
+    border: 1px solid #00b09b83;
+    padding: 8px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.contenct_results .back button a{
+    text-decoration: none;
+    color: #fff;
+}
+.contenct_results .back button:hover{
+    border: 1px solid #00b09b83;
+    background-color: white;
+}
+.contenct_results .back button:hover a{
+    color:#00b09b83;
+}
+
+.contenct_results .title {
+    padding-top: 10px;
+    
+    font-size: 15px;
+}
+
+.contenct_results .contenct_information {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.contenct_results .contenct_information .contenct_table {
+    width: 55%;
+    height: auto !important;
+}
+.contenct_results .contenct_information .contenct_table article h1{    
+    font-size: 15px;
+    padding-top: 10px;
+    text-align: left;
+    margin: 0;
+}
+.contenct_results .contenct_information .contenct_table .tables {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.contenct_results .contenct_information .contenct_table .tables .count_results {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.contenct_results .contenct_information .contenct_table .tables .count_results p {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}   
+
+
+.contect_graphys .title_graphys{
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding-top: 18px;
+}
+.contect_graphys .title_graphys p{
+    font-size: 12px;
+    color: black;
+    
+}
+
+
+.contenct_results .contenct_information .contect_graphys {
+    width: 40%;
+    height: auto;
+}
+
+.contenct_results .contenct_information .contect_graphys .contect_datas {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #00b09b83;
+    border-bottom: 1px solid #ddd;
+}
+
+.contenct_results .contenct_information .contect_graphys .contect_datas .title {
+    width: 100%;
+    height: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.contenct_results .contenct_information .contect_graphys .contect_datas p {
+    font-size: 12px;
+    color: white;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-caption-bottom {
+    text-align: center;
+    color: black;
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos adicionales para personalizar el modal según tus necesidades */

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_index.css') }}">
+</head>
+<body>
+    <section class="banner_index">
+        <article class="contenct_title">
+            <h2>Consultas registradas para la base de datos Airbus380</h2>
+        </article>
+        <form action="{{ url_for('logout') }}" method="post" >
+            <button type="submit">Cerrar sesión</button>
+        </form>
+    </section>
+    <section class="querys">
+        <article class="description_section">
+            <p>Listado de consultas registradas:</p>
+        </article>
+        {% for query in queries %}
+        <article class="cards">
+            <h4>ID: {{ query[0] }}</h4>
+            <p>Consulta: {{ query[1] }}</p>
+
+            <form  action="{{ url_for('visualizar_consulta', id=query[0], name=query[1]) }}" method="post">
+                <button type="submit" class="view-query-btn">Visualizar</button>
+            </form>
+
+        </article>
+        {% endfor %}
+    </section>
+</body>
+</html>

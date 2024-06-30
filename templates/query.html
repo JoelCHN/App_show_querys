@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Resultados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_query.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <section class="banner_index">
+        <article class="contenct_title">
+            <h2>Consultas registradas para la base de datos Airbus380</h2>
+        </article>
+        <form action="{{ url_for('logout') }}" method="post" >
+            <button type="submit">Cerrar sesión</button>
+        </form>
+    </section>
+    <section>
+        <article class="contenct_results" id="modal-content">
+            <div class="back">
+                <button type="button"><a href="{{ url_for('index_page') }}">Regresar</a></button>
+            </div>
+            <h1 class="title">{{ id_query }} : {{ name }}</h1>
+            <section class="contenct_information">
+                <section class="contenct_table">
+                    <article>
+                        <h1>Resultado:</h1>
+                    </article>
+                    <div class="tables">
+                        <div class="count_results">
+                            <p>Tiempo: {{ time }} segundos</p>
+                            <p>Resultados: {{ count }} filas</p>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    {% for col in columnas %}
+                                        <th>{{ col }}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in resultados %}
+                                    <tr>
+                                        {% for value in row %}
+                                            <td>{{ value }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="contect_graphys">
+                    <div class="contect_datas">
+                        <p class="title">Medidas de tendencia</p>
+                        <p>Moda: {{ mode }}</p>
+                        <p>Media: {{ mean }} </p>
+                        <p>Mediana: {{ median }} </p>
+                    </div>
+                    <div class="title_graphys">
+                        <p>Gráficos de tendencia</p>
+                    </div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename=graph_dir + '_bar_chart.png') }}" class="d-block w-100" alt="Gráfico de Barras">
+                                <div class="carousel-caption-bottom">Gráfico de Barras</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename=graph_dir + '_hist.png') }}" class="d-block w-100" alt="Histograma">
+                                <div class="carousel-caption-bottom">Histograma</div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ url_for('static', filename=graph_dir + '_pie_chart.png') }}" class="d-block w-100" alt="Gráfico de Pastel">
+                                <div class="carousel-caption-bottom">Gráfico de Pastel</div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
+                    
+                    
+                    
+
+                </section>
+            </section>
+        </article>
+    </section>
+</body>
+</html>
+

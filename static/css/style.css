@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*Styles for the login page*/
+.Background_login{
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top right, #00b09b, #96c4f0);
+    padding-top: 50px;
+}
+.Background_login .contenct_form{
+    width:340px;
+    height: 480px;
+    background-color: rgba(255, 255, 255, 0.349) ;
+    box-shadow: 1px 0.75px 1px 0.5px rgb(255, 255, 255);
+    margin: auto ;
+    border-radius: 15px;
+    display: block ;
+    align-content: space-around;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin-bottom: 120px;
+}
+.Background_login .contenct_form h3{
+    text-align: center;
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.Background_login .contenct_form .form_login{
+    width: 80%;
+    height: 100%;
+    display: block;
+    padding-top: 10px;
+    margin: auto;
+}
+.Background_login .contenct_form hr{
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.Background_login .contenct_form .form_login input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    background-color: #d1deeb;
+}
+
+
+.container {
+    text-align: center;
+}
+.container h2{
+    font-size: 13px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.74);
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #00b09b;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider:after {
+    content: 'No';
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 70%;
+}
+
+input:checked + .slider:after {
+    content: 'Si';
+    left: 30%;
+}
+
+
+
+
+.Background_login .contenct_form .form_login input::placeholder{
+    color: rgb(0, 0, 0);
+    font-size: 15px;        
+}
+.Background_login .contenct_form .form_login button{
+    margin: auto;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00b09b;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.Background_login .contenct_form .form_login button:hover{
+    background-color: #96c4f0;
+    color: black;
+}

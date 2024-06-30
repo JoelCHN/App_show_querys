@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body class="Background_login">
+    <section class="contenct_form">
+        <h3>Iniciar sesión</h3>
+        <hr>
+        <form action="/login" class="form_login" id="form_login" method="post">
+            
+
+            <div class="container">
+                <h2>¿Autentificación de windows?</h2>
+                <label class="switch">
+                    <input type="checkbox" name="checkAuth" id="checkAuth">
+                    <span class="slider"></span>
+                </label>
+            </div> 
+            <input type="text"  placeholder="Servidor" name="Server" required>
+            <input type="text" placeholder="Base de datos" name="Database" required>           
+            <input type="text" placeholder="Usuario" name="User" id="User">
+            <input type="password" placeholder="Contraseña" name="Password" id="Password">
+            
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </section>
+</body>
+</html>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
