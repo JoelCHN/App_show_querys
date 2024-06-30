@@ -7,8 +7,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 from flask import Flask, render_template, request, redirect, url_for, session
 from dotenv import load_dotenv
-from scipy import stats
-import numpy as np
 import statistics
 
 matplotlib.use('Agg')
@@ -802,7 +800,7 @@ def visualizar_consulta(id, name):
             error_message = f"Error de conexión: {sqlstate}"
             return {'error': error_message}
     else:
-        return {'error': 'No active database connection'}
+        return redirect(url_for('login_page'))
 #function to create graphys
 def generate_bar_chart(df, x_col, y_col, graph_path,orientation):
     sns.barplot(x=x_col, y=y_col, data=df)

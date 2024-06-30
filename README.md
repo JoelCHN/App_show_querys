@@ -13,7 +13,7 @@ You should have the following requirements:
 
 1.**Clone the repository**
 ```bash
-git clone https://github.com/Joelchable/
+git clone https://github.com/JoelCHN/App_show_querys.git
 ```
 
 2.**Create a virtual environment (optional)**
